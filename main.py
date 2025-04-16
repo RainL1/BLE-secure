@@ -51,8 +51,8 @@ class BLE(QWidget):
     def start_function(self):
         # Скрыть кнопку
         self.start_button.hide()
-        # subprocess.Popen("sudo tshark -i bluetooth0 -a duration:60 -w pack.pcap", shell=True)
-        time.sleep(10)
+        subprocess.Popen("sudo tshark -i bluetooth0 -a duration:60 -w pack.pcap", shell=True)
+        time.sleep(60)
         # Выполнить булеву функцию
         result = self.boolean()
 
